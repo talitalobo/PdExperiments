@@ -1,0 +1,23 @@
+#N canvas 685 42 641 608 10;
+#X obj 75 485 sendOSC;
+#X msg 75 98 connect localhost 3003;
+#X text 71 34 Resolume;
+#X text 179 79 Porta;
+#X obj 379 34 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 377 71 counter 2;
+#X floatatom 376 110 5 0 0 0 - - -;
+#X obj 375 158 select 0 1 2;
+#X msg 120 197 send /layer1/clip1/connect 1;
+#X msg 129 218 send /layer1/clip2/connect 1;
+#X msg 139 239 send /layer1/clip3/connect 1;
+#X msg 89 139 disconnect;
+#X msg 146 260 send /layer1/clip4/connect 1;
+#X msg 315 468 send /layer1/clip5/clear 1;
+#X connect 1 0 0 0;
+#X connect 8 0 0 0;
+#X connect 9 0 0 0;
+#X connect 10 0 0 0;
+#X connect 11 0 0 0;
+#X connect 12 0 0 0;
+#X connect 13 0 0 0;
