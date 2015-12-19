@@ -1,10 +1,10 @@
-#N canvas -8 -8 1366 695 10;
+#N canvas 464 156 836 640 10;
 #X obj 481 592 sendOSC;
 #X msg 431 633 connect localhost 3003;
 #X text 536 614 Porta;
-#X obj 381 56 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 381 68 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X floatatom 465 101 5 0 0 0 - - -;
+#X floatatom 381 139 5 0 0 0 - - -;
 #X msg 553 241 send /layer1/clip1/connect 1;
 #X msg 562 262 send /layer1/clip2/connect 1;
 #X msg 572 283 send /layer1/clip3/connect 1;
@@ -37,11 +37,15 @@
 #X msg 133 508 send /layer1/clip28/connect 1;
 #X msg 121 529 send /layer1/clip29/connect 1;
 #X msg 108 549 send /layer1/clip30/connect 1;
-#X obj 301 152 select 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18
+#X obj 344 202 select 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18
 19 20;
-#X obj 592 30 key;
-#X obj 363 84 counter 17;
+#X obj 552 16 key;
+#X obj 381 95 counter 17;
 #X text 10 11 Connecting to Resolume;
+#X obj 645 109 random 29;
+#X floatatom 645 141 5 0 0 0 - - -;
+#X obj 645 74 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
 #X connect 1 0 0 0;
 #X connect 3 0 39 0;
 #X connect 4 0 37 0;
@@ -93,5 +97,8 @@
 #X connect 37 13 20 0;
 #X connect 37 14 21 0;
 #X connect 37 15 22 0;
-#X connect 38 0 3 0;
+#X connect 38 0 43 0;
 #X connect 39 0 4 0;
+#X connect 41 0 42 0;
+#X connect 42 0 37 0;
+#X connect 43 0 41 0;
